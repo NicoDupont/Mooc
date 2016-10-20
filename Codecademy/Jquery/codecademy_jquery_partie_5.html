@@ -1,0 +1,253 @@
+<!--
+PARTIE 5 :
+
+jQuery Effects
+
+-->
+
+<!--
+You Know This!
+You already know a lot about jQuery effects, so let's try a training wheels-free exercise. You can do this! We believe in you.
+
+Instructions
+Write the necessary jQuery code to .hide() your 'div' as soon as the HTML document is ready.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('div').hide();   
+});
+</script>
+
+
+<!--
+More Practice with .animate()
+Let's get in a little more practice with the .animate() effect. That's the one with the slightly more complicated input—if we wanted to move a div 10 pixels down, we'd type something like
+
+$('div').animate({top:'+=10px'},500);
+Where the bit between curly braces says "hey, jQuery! Add 10 pixels to the current top margin," and the second input says "do it in 500 milliseconds!" (1,000 milliseconds = one second.)
+
+Instructions
+Going down?
+
+Let's begin begin by targeting our image inside $()
+Then let's animate our image to go down by 100px
+Let's make it happen in 1 second or 1000 milliseconds
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    // Fill in the blanks!
+    $('img').animate({ top: '+=100px'},1000);
+});
+</script>
+
+
+<!--
+Introducing: jQuery UI
+All right! Time to blaze new jQuery trails with a new jQuery library: jQuery UI.
+
+jQuery UI includes a number of ultra-fancy animations you can use to make your websites do incredible things.
+
+For instance, remember when we lamented that jQuery didn't include a .blowUp() effect for our planet Krypton? Well, that's still true. But jQuery UI has an .effect() effect, and we are totally going to give it the input 'explode'.
+
+Note that we've included an extra <script> tag in our HTML documents; this is used to include jQuery UI in our webpages. We don't have to do this with regular jQuery, since Codecademy automatically includes it for us.
+
+Instructions
+In the script.js tab, get your document .ready() and pass in a .click() event handler on your 'div'. Inside that, call .effect() on your div and give it the input 'explode'. Head over to the Result tab and click on Krypton to watch it explode!
+
+?
+Stuck? Get a hint!
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('div').click(function(){
+        $(this).effect('explode');
+    });
+});
+</script>
+
+
+<!--
+.bounce()
+Cool, right? But we can do much more than just blow things up.
+
+Another possible effect is 'bounce'. We give this as an input to .effect() just like 'explode', but we add an extra input to tell it how many times to bounce. This code will make our target 'div' bounce twice in 200 milliseconds:
+
+$('div').effect('bounce', {times:2}, 200);
+Instructions
+Change your 'explode' to a bounce, and make it so Krypton bounces three times in 500 milliseconds when you click on it.
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('div').click(function(){
+        $(this).effect('bounce', {times:3}, 500);
+    });
+});
+</script>
+
+
+<!--
+.slide()
+We can also make Krypton .slide() into view. Not surprisingly, we do this by calling the .effect() effect and passing in 'slide' as an input.
+
+If you want to see everything jQuery UI can do, you can check out the documentation here!
+
+Instructions
+Go ahead and change your 'bounce' to a 'slide', and remove the other two inputs.
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $('div').click(function(){
+        $(this).effect('slide');
+    });
+});
+</script>
+
+
+<!--
+Special Effects
+The .effect() effect has all kinds of magical goodness in it, but it's not the most amazing thing jQuery UI can do. The library has a number of built-in effects that can make your website look sleek and professional with surprisingly little code.
+
+You can learn more in the jQuery UI documentation!
+
+Instructions
+Check out the code in script.js, then click Save & Submit Code and head on over to the Result tab to see what jQuery UI can do for you. Be sure to click each accordion section!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#menu").accordion({collapsible: true, active: false});
+});
+</script>
+
+
+<!--
+Drag Racing
+jQuery UI includes a .draggable() function that can make any HTML element draggable—you can click on it and move it anywhere on the page!
+
+We thought you might be tired of <div> blocks, so we made you a CSS car. We worked super hard on it.
+
+Instructions
+Call the .draggable() function on '#car'. Click Save & Submit Code, then go to the Result tab and drag your car around the page!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#car").draggable();
+});
+</script>
+
+
+<!--
+One Resize Fits All
+You didn't love our mega sweet car? We slaved over that for months! Back to regular <div>s for you!
+
+(Just kidding. That little guy took us decades of hard work.)
+
+Instructions
+Call the .resizable() function on your 'div'. Click Save & Submit Code, then go to the Result tab and resize your <div> to your heart's content!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div").resizable();
+});
+</script>
+
+
+<!--
+A Greater Selection
+Images and <div>s aren't the only elements we can target with jQuery UI—we can also enhance our ordered and unordered lists.
+
+Check out the HTML in index.html. We've set up a pretty nifty ordered list, but when it shows up in the Result tab, it's a little bland. With jQuery UI, we can fix that!
+
+Instructions
+In the script.js tab, get your document .ready() and call the .selectable() function on your 'ol'. Click Save & Submit Code, then click on the list items in your ordered list in the Result tab to see how much sleeker it looks.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("ol").selectable();
+});
+</script>
+
+
+<!--
+Let's Sort Things Out
+Lists are great, and jQuery UI makes them greater. While selecting is cool, it doesn't necessarily make our list as dynamic as we'd like—what if we want to reorder the elements in our list?
+
+Enter the .sortable() function.
+
+Instructions
+In the script.js tab, replace your .selectable() with a .sortable(). Click Save & Submit Code, then rearrange your list items as you see fit!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("ol").sortable();
+});
+</script>
+
+
+<!--
+jQuery UI, is There Anything You Can't Do?
+All right! Time to use jQuery UI to create that awesome-looking accordion-style dropdown menu we saw in the last section. For this, we'll be using jQuery UI's built-in .accordion() function. (Handy, no?)
+
+First, however, we'll need some additional HTML elements.
+
+Instructions
+We got you started in the index.html tab, but a menu's no good with only one section! Add two more like the first one. They should go inside the '#menu' div but after the "Section 1" div.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#menu').append("<h3>Section  2</h3>");
+    $('#menu').append("<div><p>Second section !</p></div>");
+    $('#menu').append("<h3>Section  3</h3>");
+    $('#menu').append("<div><p>Third section !</p></div>");
+});
+</script>
+<!-- sortie :
+Section 1
+
+I'm the first section!
+
+Section 2
+
+Second section !
+
+Section 3
+
+Third section !
+-->
+
+
+<!--
+Break Out Your .accordion()!
+Perfect! Now all we need to do is call .accordion() on our '#menu'.
+
+Instructions
+Go ahead and call .accordion() on your '#menu'. Click Save & Submit Code to see your menu come to life!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#menu').append("<h3>Section  2</h3>");
+    $('#menu').append("<div><p>Second section !</p></div>");
+    $('#menu').append("<h3>Section  3</h3>");
+    $('#menu').append("<div><p>Third section !</p></div>");
+    $('#menu').accordion();
+});
+</script>
+
+
+<!--
+Victory!
+You did it! Doesn't that look great?
+
+With the jQuery projects you've mastered over the last several courses, you're now prepared to make a truly impressive interactive website. And when you make it, we'd love to see it!
+
+Instructions
+Click Save & Submit Code to complete this course. You've finished your jQuery apprenticeship, but your journey's only begun. Share any cool websites you make with us via Twitter: @Codecademy. We'll retweet our favorites!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#menu').append("<h3>Section  2</h3>");
+    $('#menu').append("<div><p>Second section !</p></div>");
+    $('#menu').append("<h3>Section  3</h3>");
+    $('#menu').append("<div><p>Third section !</p></div>");
+    $('#menu').accordion();
+});
+</script>

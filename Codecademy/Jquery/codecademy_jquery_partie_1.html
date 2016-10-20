@@ -1,0 +1,323 @@
+<!-- ATTENTION IL MANQUE LA LIBRAIRIE JQUERY DANS LES SCRIPTS !!!!!!!!!!!!!! -->
+
+<!--Introduction to jQuery
+
+See It to Believe It
+So far, we've built web pages using HTML and styled them using CSS. Our pages look great, but they're not interactive —we can't drag elements around the page, open and close sliding panels, animate HTML elements, or add new elements to our HTML pages simply by clicking a button.
+
+All that's about to change, though. In this track, you're going to learn jQuery, which will allow you to do all these things and more.
+
+Instructions
+Check out the results! Hover over each box to see what happens, then click on each one. Click Save & Submit Code when you're ready to start learning jQuery!
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link rel="stylesheet" type="text/css" href="stylesheet.css"/>-->
+		<link rel="stylesheet"
+		div {
+			height:100px;
+			width:100px;
+			display: inline-block;
+		}
+
+		#red {
+			background-color:#FF0000;
+		}
+
+		#blue {
+			background-color:#0000FF;
+		}
+
+		#yellow {
+			background-color:#E2BE22;
+		}
+
+		#green {
+			background-color:#008800;
+		}
+		/>
+        <!--<script type="text/javascript" src="script.js"></script>-->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('div').mouseenter(function() {
+				   $(this).animate({
+					   height: '+=10px'
+				   });
+		   });
+		   $('div').mouseleave(function() {
+			   $(this).animate({
+				   height: '-=10px'
+			   }); 
+		   });
+		   $('div').click(function() {
+			   $(this).toggle(1000);
+		   }); 
+		});
+		</script>		
+    </head>
+    <body>
+        <div id="red"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </body>
+</html>
+
+
+<!--
+The Document Object Model
+To get the most out of jQuery, we should review how an HTML page is put together.
+
+An HTML document is structured according to the Document Object Model, or DOM. It's by interacting with the DOM that jQuery is able to access and modify HTML.
+
+The DOM consists of every element on the page, laid out in a hierarchical way that reflects the way the HTML document is ordered. Remember how we could think of the HTML document as a tree? You can think of the DOM the same way. Just as with an HTML document, elements in the DOM can have parents, children, and siblings.
+
+If you're a little hazy on what an HTML element is, what a CSS selector is, or what IDs and classes are, feel free to review these in the HTML and CSS track.
+
+Instructions
+Check out the code in script.js. We'll explain the code more soon, but for now the main idea is that when the HTML document loads, the code will select an HTML element and make it disappear.
+
+We'll want to target the div element here, so on line 2 inside the $( ), add "div".
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<title></title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<link rel="stylesheet"
+		div {
+		height:100px;
+		width:100px;
+		background-color:#FF0000;
+		border-radius:5px;
+		}
+		/>
+        <script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("div").fadeOut(1000);
+		});
+		</script>
+	</head>
+	<body>
+        <div></div>   
+	</body>
+</html>
+
+
+<!--
+Changing Targets
+Don't be intimidated by the amount of code you're seeing—we'll go through it piece by piece to make sure you understand it thoroughly.
+
+Just like the CSS div refers to the HTML element <div>, the jQuery 'div' refers to the same HTML element <div>. You can think of the element name passed to jQuery as identical to the CSS element, only wrapped in quotes. So, for instance, you could target anything of class button with
+
+$('.button').someAction
+As you'll remember, .button in your CSS file is how you'd target anything of class="button" in your HTML file.
+
+Instructions
+Put a selector (remember CSS selectors?) inside $() so instead it points to the ID #green.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title></title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<link rel="stylesheet"
+		div {
+			height:100px;
+			width:100px;
+			background-color:#FF0000;
+			border-radius:5px;
+			margin-bottom:5px;
+		}
+		#green {
+			background-color:#008800;
+		}
+		/>
+        <script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#green").fadeOut(1000);
+		});
+		</script>
+	</head>
+	<body>
+        <div></div>
+        <div id="green"></div>
+	</body>
+</html>
+
+<!--
+What is jQuery?
+jQuery is a library, or set of helpful add-ons, to the JavaScript programming language. It may seem counterintuitive to learn how to use a library before learning the actual language, but there are a few good reasons for this.
+
+It takes a while to become comfortable with JavaScript, and it's trickier to manipulate HTML elements directly with JavaScript than with jQuery. In order to help you build awesome websites faster, we're starting you off with jQuery.
+jQuery provides a simple interface for the underlying JavaScript. It's easier for many users to learn jQuery first, then dive into the nitty-gritty JavaScript details later.
+jQuery is much better at giving you immediate, visual results than regular JavaScript. By the end of this lesson, you'll have built your own interactive button!
+Instructions
+On the script.js tab, add the missing pieces on line 2 so that your jQuery code calls fadeOut on the div with the ID #notready.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>What Say You?</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<link rel="stylesheet"
+		div {
+			height:100px;
+			width:100px;
+			border-radius:5px;
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			font-family: Verdana, Arial, Sans-Serif;
+			margin-right:5px;
+		}
+		#ready {
+			background-color:#008800;
+			color:#FFFFFF;
+		}
+		#notready {
+			background-color:#FF0000;
+			color:#FFFFFF;
+		}
+		/>
+        <script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#notready").fadeOut(1000);
+		});
+		</script>
+	</head>
+	<body>
+        <div id="ready">I'm ready!</div>
+        <div id="notready">You'll never take me alive, jQuery!</div>
+	</body>
+</html>
+
+<!--
+Getting Started
+Next, we'll need to start up our jQuery magic using the $(document).ready(); syntax you've seen. It works like this:
+
+$() says, "hey, jQuery things are about to happen!"
+Putting document between the parentheses tells us that we're about to work our magic on the HTML document itself.
+.ready(); is a function, or basic action, in jQuery. It says "hey, I'm going to do stuff as soon as the HTML document is ready!"
+Whatever goes in .ready()'s parentheses is the jQuery event that occurs as soon as the HTML document is ready.
+So,
+
+$(document).ready(something);
+says: "when the HTML document is ready, do something!" (We'll show you how to replace something with an action in the next exercise.)
+
+Note that .ready(); ends with a semicolon. This tells jQuery that you're done giving it a command.
+
+Instructions
+Add a $(document).ready(); call in script.js. Remember, the document is special: it's not an HTML element like <p> or <div>, so it doesn't go in quotes.
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+});
+</script>
+
+<!--
+Electr(on)ic Slide
+Almost there! Now we just need to include an action in the body of our function. In this case, we'll make a header div for our HTML page slide into view.
+
+Between the {}s of our function(), we'll want to turn our div into a jQuery object so jQuery can manipulate it. Much like we use .ready() on $(document), we'll use the .slideDown() action on our div jQuery object.
+
+Inside .slideDown's parentheses, we'll want to tell it how quickly to slide down. Let's enter 'slow' (include the quotes).
+
+Instructions
+On line 2 in script.js, make 'div' into a jQuery object and call the .slideDown() action on it. Inside slideDown()'s parentheses, type 'slow' so jQuery knows how quickly to slide your div down.
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("div").slideDown('slow');
+});
+</script>
+
+<!--
+Get Yourself In...
+Great! Next, let's include our function keyword and two new actions together, mouseenter() and fadeTo().
+
+mouseenter() does what you might expect: it produces a change when your mouse enters a given HTML element. For example,
+
+$(document).ready(function() {
+    $('div').mouseenter(function() {
+        $('div').hide();
+    });
+});
+would hide every <div> on the page as soon as you mouse over one. (We'll find out how to affect just one <div> among many in the next lesson.) For now, we only have one <div>, so this setup is okay.
+
+Instead of hide(), however, we'll place fadeTo() inside mouseenter(). fadeTo() takes two arguments, or inputs, between its parentheses, separated by a comma: the speed at which to fade, and the opacity (or transparency) to fade to. For example,
+
+fadeTo('fast', 0.25);
+would quickly fade the target element to 25% of its original opacity, making it very light-colored.
+
+Instructions
+Using the examples above, make it so your 'div' fades to 1 (100%) opacity when your mouse enters the 'div'. Make the animation speed 'fast'. (Make sure to give fadeTo() its inputs in order—speed, then opacity.)
+
+Click Save & Submit Code, then slowly mouse over your 'div' to see the effect!
+-->
+
+<html>
+	<head>
+		<title>Button Magic</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+		<link rel="stylesheet'
+		div {
+			height: 60px;
+			width: 100px;
+			border-radius: 5px;
+			background-color: #69D2E7;
+			text-align: center;
+			color: #FFFFFF;
+			font-family: Verdana, Arial, Sans-Serif;
+			opacity: 0.25;
+		}
+		/>
+        <script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('div').mouseenter(function() {
+				$('div').fadeTo('fast', 1);
+			});
+		});
+		</script>
+	</head>
+	<body>
+     <div><br/><strong>Click Me!</strong></div>   
+	</body>
+</html>
+
+
+<!--
+...and Get Yourself Out!
+Excellent! Your button looks great now—it stands out when the user mouses over it.
+
+However, you'll notice that when you take your cursor off the button, it stays dark. What we really want is for our button to become light again when our mouse leaves.
+
+You might have guessed that jQuery includes a mouseleave() action. If so, you're right! (If you're curious, you can learn more about these actions in the jQuery documentation.)
+
+Instructions
+Between the }); that ends your mouseenter() and the }); that ends your $(document).ready(), add a mouseleave() that uses fadeTo to return your div's opacity to 0.5. Like the previous fadeTo, it should have 'fast' as its first input.
+
+Click Save & Submit Code, then slowly mouse over your 'div' to see the effect!
+-->
+<script type="text/javascript"
+$(document).ready(function(){
+    $('div').mouseenter(function() {
+        $('div').fadeTo('fast', 1);
+    });
+    $('div').mouseleave(function() {
+        $('div').fadeTo('fast', 0.5);
+    });
+});
+</script>
+

@@ -1,0 +1,294 @@
+<!-- ATTENTION IL MANQUE LA LIBRAIRIE JQUERY DANS LES SCRIPTS !!!!!!!!!!!!!! -->
+
+<!--
+
+jQuery Functions and Selectors
+
+Functions, Part I: $(document).ready
+Functions are the basic unit of action in jQuery. The main entry point of most jQuery applications is a block of code that looks like this:
+
+$(document).ready(function() {
+    Do something
+});
+Let's go through it bit by bit.
+
+$(document) is a jQuery object. The $() is actually a function in disguise; it turns the document into a jQuery object.
+.ready() is a type of function; you can think of it as sort of a helper that runs the code inside its parentheses as soon as the HTML document is ready.
+function(){} is the action that .ready() will perform as soon as the HTML document is loaded. (In the above example, the Do something placeholder is where those actions would go.)
+Instructions
+Practice makes perfect! Set up your jQuery code in the script.js tab with $(document).ready() and pass it a function that will immediately hide the orange div on the Result tab. (You can use the jQuery .hide() effect to do this.)
+
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('div').hide();
+});
+</script>
+
+
+<!--
+Functions, Part II: Functions Explained
+A function is made up of three parts: the function keyword, any inputs that function takes (they go between the ()s and are separated by commas if there are more than one), and whatever actions the function should perform (these go between the {}s). The general form is:
+
+function(input1, input2, etc) {
+    Do a thing
+    Do another thing
+    Do yet another thing!
+}
+One of the nice things about jQuery is that you can give a function just about anything as an input—even another function! That's why .ready() can take function between its parentheses; it's taking a function as input.
+
+(If you're interested, you can learn more about functions in the JavaScript track.)
+
+Instructions
+Check out the code in script.js. It includes a new jQuery action, .click(), that we'll learn more about soon!
+
+See how we pass functions to both .ready() and .click() as inputs? When you're ready, click Save & Submit Code, then click on the orange div in the Result tab to see the fadeOut() effect.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('div').click(function() {
+        $('div').fadeOut('slow');
+    });
+});
+</script>
+
+
+<!--
+Variables
+
+Variables are a place for us to store information for use at a later time. Variables can hold any type of information you work with, so just think of them as containers.
+
+The single = sign is used to assign values. For instance, in jQuery, you can write
+
+var lucky = 7;
+var name = "Codecademy";
+var $p = $('p');
+Our first variable contains a number, 7, while the second variable contains some text, "Codecademy". Our 3rd variable stores the result of a jQuery selector $('p') in the variable $p . As you can see, this is just a handy way to save this information for later.
+
+Why would we do this? Well, up until now we haven't had to modify anything more than once. If we wanted to change the webpage based on new information, we would need to store that information in variables. Maybe you want to create a loading page and have it vanish as you receive that information. It'd be a good idea to use variables.
+
+Instructions
+Check out the preview window. All looks well and good, except for #4—that's nonsense!
+
+Create a variable called $target in script.js and use the = sign to assign it to the jQuery selector that represents #4 in the ordered list. When you run your code, it should fade away!
+
+You're going to need your CSS knowledge for this one and there is more then one way to achieve this. Check the Hint if you need a reminder!
+-->
+
+<!--
+id = 4 ajouté dans le code pour ensuite pouvoir sélectionner l'id numéro 4 directement dans la fonction Jquery
+-->
+<script type="text/javascript">
+// Write your jQuery code on line 3!
+$(document).ready(function() {
+    var $target = $('#4');
+    $target.fadeOut('fast');
+});
+</script>
+
+<!--
+$p vs $('p')
+You probably noticed that we used both $ and $() in the last exercise:
+
+var $p = $('p');
+There's a subtle difference between the two.
+
+$p is just a variable name. There is no magic associated with the $ in $p; it's just a convention for saying, "hey, this variable contains a jQuery object." We could call $p anything we want: $paragraph, paragraph, space_cows, whatever! It's just helpful for people reading our code to see $p, since this is a concise way of saying "hey, there's a 'p' jQuery object in here."
+
+$(), on the other hand, is magic. This is the function in disguise that creates jQuery objects. If you're making a jQuery object, you gotta use it!
+
+Instructions
+Remember when we told you to ignore the paragraph = in the last lesson? Well, now you know what it does! (You also know that it should have been $p.)
+
+Create a variable $div, and assign it to a div jQuery object using =. No need to use $(document).ready() or any additional code!
+-->
+<script type="text/javascript">
+// Write your jQuery code below!
+$div = $('div');
+</script>
+
+
+
+<!--
+Using Functions to Select HTML Elements
+Now that you know more about how functions work, you understand that when we have something like
+
+$(document).ready(function() {
+    $('div').hide();
+});
+we're passing .ready() a function (which itself takes no inputs; that's why its () are empty) and that function's job is to .hide() the div jQuery object.
+
+Instructions
+Give .ready() a function(){} as an input. Inside your function's {}s, call fadeIn('slow') on the (currently invisible) div to bring it into view. That's right, there's a fade in, as well!
+
+-->
+
+<script type="text/javascript">
+// Write your jQuery code below!
+$(document).ready(function() {
+    $('div').fadeIn('slow');
+});
+</script>
+
+<!--
+Selecting by Class
+We don't have to limit ourselves to selecting HTML elements like <p> and <div>; essentially, we can put any CSS selector in quotes and pass it into $(). This means we can select classes, too!
+
+Recall that we can select classes in CSS by using a dot (.). If we have class="red" in our HTML, we can target it in CSS with .red. In jQuery, all we need to do is put '.red' in quotes, and we can pass it to $() to make a jQuery object.
+
+Instructions
+Let's get some practice with the .click() action.
+
+Finish the jQuery code so that it will make all four divs of class '.vanish' fadeOut() 'slow'ly when the button is .click()ed.
+-->
+<script type="text/javascript">
+// button = le bouton a cliquer dans une balise html <button>click here</button>
+// .vanish = le nom de la classe css appliqué sur les div de l'exemple
+$(document).ready(function() {
+    $("button").click(function() {
+        $(".vanish").fadeOut('slow');
+    });
+});
+</script>
+
+
+<!--
+Selecting by ID
+If we can select by class, it follows that we can also select by ID. We do this by putting the ID name (in quotes) inside $(). Just as we need the . for classes, we need the # for IDs. We could target id="header" like so:
+
+$('#header');
+The semicolon at the end is important—it's how jQuery knows we're done giving it a command. For now, a good rule of thumb is that you should put semicolons at the end of any line that does not end with an open {. (The editor will try to help you out with your semicolon placement, so pay attention to its warnings.) Examples of correct and incorrect semicolon use are in the Hint.
+
+Instructions
+Update your jQuery code so that it only .fadeOut()s the div with the ID #blue.
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('button').click(function() {
+        $("#blue").fadeOut('slow'); //sélection de la div avec id="blue"
+    });
+});
+</script>
+
+
+<!--
+Flexible Selections
+Anything you can target with CSS, you can modify with jQuery. For example, we can apply a fadeTo() to a p selector like this:
+
+$('p').fadeTo('slow', 0);
+We can apply a fadeTo() to an li selector like this:
+
+$('li').fadeTo('slow', 0);
+We can apply a fadeTo() to both the p and li selectors like this:
+
+$('p, li').fadeTo('slow', 0);
+This is called a compound selector.
+
+Let's use a compound selector to apply a fadeTo() to both the .pink and .red selectors.
+
+Instructions
+Let's use a compound selector to apply a fadeTo() to both the .pink and .red selectors.
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.pink, .red').fadeTo('slow',0); //sélection de plusieurs items
+});
+</script>
+
+
+<!--
+'this' is Important!
+In the last lesson, we had some code that looked like this:
+
+$(document).ready(function() {
+    $('div').mouseenter(function() {
+        $('div').hide();
+    });
+});
+The second line is good: this tells us that when we mouse into a div, we should take a certain action. However, $('div').hide(); won't just hide the div you mouse into; it will hide all the divs on the page. How can we tell jQuery we only want to affect this particular div?
+
+With this, of course!
+
+The this keyword refers to the jQuery object you're currently doing something with. Its complete rules are a little tricky, but the important thing to understand is if you use an event handler on an element—that's the fancy name for actions like .click() and .mouseenter(), since they handle jQuery events—you can call the actual event that occurs (such as fadeOut()) on $(this), and the event will only affect the element you're currently doing something with (for example, clicking on or mousing over).
+
+Instructions
+Check out the code in script.js. Instead of using fadeOut() on all 'div's, we're just using it on this div, where this refers to the div you're clicking on. Click Save & Submit Code, then click on your divs one by one to see it work!
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('div').click(function() {
+        $(this).fadeOut('slow');  //this fait référence à la div du click
+    });
+});
+</script>
+
+
+<!--
+Ready?
+All right! Time to use our new jQuery knowledge to add another interactive component to our website: a sliding panel that moves up and down when clicked.
+
+We've set up the necessary HTML and CSS for you. Your assignment: animate it with jQuery.
+
+Instructions
+You know the drill! Turn document into a jQuery object and call the .ready() action. (No need to put anything in .ready()'s parentheses just yet.)
+-->
+<!--
+Click and Pull
+Good! Now we want to trigger an event when the "Slide Up/Down" tab is clicked (that tab's class is .pull-me).
+
+Instructions
+Inside .ready()'s parentheses, add your function(){}.
+Your function won't take any inputs between ()s, but between its {}s, it should call the .click() event handler on the .pull-me jQuery object.
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".pull-me").click(function() {
+    });
+});
+</script>
+
+
+<!--
+Toggling Our Panel
+Perfect! Just one more step: we need to tell .click() what to do. In this case, when our pull tab is clicked, we want our sliding panel (with the class .panel) to open or close.
+
+The jQuery event we need to toggle our sliding panel is (you guessed it): .slideToggle()! We'll pass it one input, which is the speed of our slide animation.
+
+Instructions
+Inside .click()'s parentheses, create a .panel jQuery object and call the .slideToggle() effect. Give it the input 'slow' for the animation speed.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".pull-me").click(function() {
+        $(".panel").slideToggle('slow');
+    });
+});
+</script>
+
+
+<!--
+Well Done!
+Great work! See how easy this is? With a little jQuery magic, you can make your websites do all kinds of amazing things.
+
+Websites like Twitter, Facebook, and Gmail all make use of jQuery to help make their websites interactive. By learning jQuery, you're well on your way to Internet greatness!
+
+Any time you have questions about what jQuery can do or how it works, you can always check out the jQuery documentation, which covers every aspect of the library.
+
+Instructions
+When you're ready, go ahead and click Save & Submit Code to complete this lesson and move on to more jQuery goodness!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".pull-me").click(function() {
+        $(".panel").slideToggle('slow');
+    });
+});
+</script>
+
+
+

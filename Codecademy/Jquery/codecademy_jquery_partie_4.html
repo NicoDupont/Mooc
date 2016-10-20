@@ -1,0 +1,329 @@
+<!--
+PARTIE 4 :
+
+jQuery Events
+
+-->
+
+<!--
+Review of jQuery Events
+You know a lot about jQuery events already, but it never hurts to review the basics.
+
+The setup almost always looks like this:
+
+$(document).ready(function() {
+    $('thingToTouch').event(function() {
+        $('thingToAffect').effect();
+    });
+});
+where "thing to touch" is the HTML element you'll click on, hover over, or otherwise interact with, and "thing to affect" is the HTML element that fades away, changes size, or undergoes some other transformation.
+
+Sometimes these elements are one and the same—you might hover over a <div> to change its opacity. Other times, you might interact with a separate element; for example, you might click on a button to resize a <div>.
+
+Sometimes if you want an effect to occur right away, without an event like .click() or .hover(), you'll skip the second line in the above:
+
+$(document).ready(function() {
+    $('thingToAffect').effect();
+});
+Instructions
+Take a look at the code in script.js. Make sure you understand what it'll do! Click Save & Submit Code when you're ready to test your hypothesis.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Result</title>
+        <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+        <!--<script type='text/javascript' src='script.js'></script>-->
+		<script type="text/javascript">
+$(document).ready(function() {
+    $('button').click(function() {
+    	var toAdd = $("input[name=message]").val();
+        $('#messages').append("<p>"+toAdd+"</p>");
+    });
+});
+</script>
+	</head>
+	<body>
+        <form>
+        MESSAGE: <input type="text" name="message" value="Type your text here!">
+        </form>
+        <button>Add!</button><br/>
+        <div id="messages"></div>
+	</body>
+</html>
+
+<!--
+Cutting to the Chase
+Let's quickly review how to trigger an effect without a special event handler like .click()—we just want our effect to happen as soon as our document is .ready().
+
+Remember: practice makes perfect!
+
+Instructions
+Your div represents the planet Krypton. Make it .fadeOut() 'fast'! (Go ahead and do this immediately, without the need for a click.)
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+   $("div").fadeOut('fast');
+});
+</script>
+
+
+<!--
+Adding an Event Handler
+Great! Now let's review how to make something happen with an event handler. In this case, we'll use .click().
+
+Instructions
+Rewrite your jQuery code so that Krypton only fades out when you .click() on it. It should still fade out 'fast'! MAKE SURE to click Save & Submit Code, then click on Krypton.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div").click(function(){
+        $(this).fadeOut('fast');
+    })
+});
+</script>
+
+
+<!--
+Combining .click() and .hover()
+Well done! Let's add one more jQuery event to our "destruction of Krypton" simulation. Krypton didn't just vanish, it exploded! Let's make it turn red.
+
+$('div').hover(function(){
+  $('div').addClass('green');
+});
+Following the pattern we have been learning, we target Krypton, our $('div')
+We then apply our hover event to our target.
+Finally, we execute the code inside the function(){} which adds a class of green to our target.
+Instructions
+Below your .click() event code from the previous lesson, create a new selector $('div')
+Apply a hover event to this selector and have it add the class red to Krypton, our div
+Check out the example above!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div").click(function(){
+        $(this).hover(function(){
+            $(this).addClass('red');
+        });
+    })
+});
+</script>
+
+
+<!--
+The .dblclick() Event
+Now that we've reviewed our jQuery event handlers, let's learn a new one.
+
+We might want to cause a jQuery effect when a user double clicks on an element, rather than just single-clicking. We can do this with the .dblclick() event handler.
+
+Instructions
+Use the .dblclick() handler to make our 'div' .fadeOut()s 'fast'. Make sure to double-click on your div to see the effect!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("div").dblclick(function(){
+        $(this).fadeOut('fast');
+    });
+});
+</script>
+
+
+<!--
+Hover
+What if you wanted to create an effect when your mouse is on top of an object, then have that effect vanish when your mouse moved away? You might notice this effect in use on many site's navigation bars!
+
+$('div').hover(
+    function(){
+      $(this).addClass('highlight');
+   },
+   function(){
+      $(this).removeClass('highlight');
+   }
+);
+We first select the element we want to modify $('div')
+Secondly notice that our hover effect is able to take two functions(){} separated by a comma. The comma is very important!
+The first function(){} we pass will be run when we first mouse over our target. Here we apply a class of highlight
+The second function(){} will be called when our mouse leaves the object. This is where we remove the class highlight
+Your second function(){} doesn't have to be the opposite of the first function(){}, but it would be very common!
+
+Instructions
+We're ready to apply a hover effect to our site's navigation bar
+
+In script.js use your selector to target our menu items
+When we hover over the menu item, let's apply a class of active
+When our mouse leaves the menu item, let's remove the active class
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("div").hover(
+    function(){
+        $(this).addClass('active');
+    },
+    function(){ //cette deuxieme partie quand la souris quitte la div
+        $(this).removeClass('active');    
+    }
+  );
+});
+</script>
+
+
+<!--
+Let's .focus()!
+Another event we can make use of is .focus(). We say an element has focus when we click on it or tab over to it. If you've ever filled out a form on a web page and seen how each text box lights up when you tab to it or click on it, you've seen focus in action!
+
+The .focus() event handler only works on elements that can receive focus—the list of these elements is a bit vague, but HTML elements like <textarea>s and <input>s are the usual suspects.
+
+Check out the form we've set up in the Result tab. If you click on the input field, you'll see it automatically highlights in a delightful baby blue. Too bad baby blue is for babies! We want our highlighting to be red.
+
+We can do this with two tools: .focus() and our .css() function from the last section. We want to write a bit of jQuery code that will change our 'input''s 'outline-color' to 'red' when it gains focus.
+
+Instructions
+In script.js, get your document .ready(). Do two things:
+
+Turn 'input' into a jQuery element and call the .focus() event handler on it.
+Inside your event handler function, call .css() on your 'input' element and pass it two inputs: the CSS element to change ('outline-color') and the color to change it to ('#FF0000').
+Not all browsers have equal CSS implementation. So for this lesson, if you are using Firefox, you will need to first change the outline-style to solid.
+-->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("input").focus(
+    function(){
+        $(this).css('outline-color','#FF0000');  // sur opera
+    });
+});
+</script>
+
+
+<!--
+The .keydown() Event
+You're not limited to mouse events in jQuery—you can trigger events using the keyboard, as well!
+
+The .keydown() event is triggered whenever a key on the keyboard is pressed. It only works on whatever page element has focus, so you'll need to click on the window containing your div before pressing a key in order for you to see its effects.
+
+Let's go ahead and combine our new event with a new effect: .animate()! We'll use this to move an object on the screen whenever we press a key.
+
+The .animate() effect takes two inputs: the animation to perform, and the time in which to perform the animation. Here's an example:
+
+$(document).ready(function() {
+   $('div').animate({left:'+=10px'},500);
+});
+This will take the first div it finds and move it ten pixels to the right. Remember, increasing the distance from the left margin moves something to the right; the += bit is just a shorthand for "take the existing number and add ten to it." In this case, it add ten pixels to the current distance from the left margin.
+
+Instructions
+After setting up with $(document).ready(), call the .keydown() event on $(document). (We want the whole document object to respond whenever a key is pressed.)
+
+Inside your .keydown() handler, .animate() your 'div' with the same inputs as above: {left:'+=10px'} and 500.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).keydown(function(){
+           $('div').animate({left:'+=10px'},500);
+    });
+});
+// la div se deplace à chaque pression de touche sur le clavier
+</script>
+
+
+<!--
+Getting Ready
+Now that you've got a solid foundation in jQuery events and have covered important functions like .keydown() and .animate(), we'll put our newfound knowledge to work. In this section, we'll animate a sprite, or two-dimensional image on the screen.
+
+For this momentous event, we've chosen a familiar face. Check him out in the Result tab!
+
+Instructions
+Let's get started. First, get your document .ready().
+
+Using .keydown()
+Good! Now we want to add a line of jQuery that will handle the keydown event.
+
+Instructions
+Inside your $(document).ready() setup, call the .keydown() event on $(document). Pass .keydown() a function(){} as an input. Here's the twist: your function should take a single input, key, which will help jQuery figure out which key was pressed.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).keydown(function(key){
+    });
+});
+</script>
+
+
+<!--
+Filling Out the Cases
+Great work! Now it's time to animate our character based on the user's input from the keyboard.
+
+Every key press on a keyboard is translated into a number for the computer to use. Don't worry about memorizing them, for now we've given you the basics in script.js
+
+// Left arrow key pressed
+case 37:
+  ('img').animate({left: "-=10px"}, 'fast');
+The left arrow key on our keyboards translates to number 37 to the computer. When that key is pressed, we animate our image to the left by subtracting 10px
+To move up we subtract 10px from the top
+To move right we add 10px to the left
+Finally, to move down we add 10px to the top
+Can you fill in Up, Down, and Right? What happens if you add pixels +=10px instead of subtracting?
+
+Instructions
+Let's make our image move!
+
+Complete the code for Up, Right, and Down
+Have fun!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+			// Left arrow key pressed
+			case 37:
+				$('img').animate({left: '-=100px'}, 'fast');
+				break;
+			// Up Arrow Pressed
+			case 38:
+				$('img').animate({top: '-=100px'}, 'fast');
+				break;
+			// Right Arrow Pressed
+			case 39:
+				$('img').animate({left: '+=100px'}, 'fast');
+				break;
+			// Down Arrow Pressed
+			case 40:
+				$('img').animate({top: '+=100px'}, 'fast');
+				break;
+		}
+	});
+});
+</script>
+
+
+<!--
+You Did It!
+Great work! Your sprite now moves to the left, right, up, and down when you hit the a, s, w, and d keys. What other effects would you want to add in order to make a basic game? How might you add a background, give your character the ability to jump, or include text? Feel free to check out the jQuery documentation to see what other jQuery magic is available to you.
+
+Instructions
+That's all for now, folks. Click Save & Submit Code to rescue the princess! Er, finish this lesson, rather.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+			// Left arrow key pressed
+			case 37:
+				$('img').animate({left: '-=100px'}, 'fast');
+				break;
+			// Up Arrow Pressed
+			case 38:
+				$('img').animate({top: '-=100px'}, 'fast');
+				break;
+			// Right Arrow Pressed
+			case 39:
+				$('img').animate({left: '+=100px'}, 'fast');
+				break;
+			// Down Arrow Pressed
+			case 40:
+				$('img').animate({top: '+=100px'}, 'fast');
+				break;
+		}
+	});
+});
+</script>
+
+

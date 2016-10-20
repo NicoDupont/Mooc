@@ -1,0 +1,344 @@
+<!--
+
+Modifying HTML Elements
+
+-->
+
+<!--
+Creating HTML Elements
+Dynamically adding elements to our HTML page is a powerful tool—it lets us modify not only the formatting, but the actual structure of our websites in response to a user's actions. For example, when you get a Gchat, each message is actually a new <div> being dynamically added to the page. Cool, right?
+
+If you think about it, we've sort of done this already: all we're doing is setting a variable equal to a jQuery object. In this case, however, instead of just having something like:
+
+$p = $('p');
+We'll want to pass in an entire HTML element in quotes:
+
+$p = $("<p>I'm a new paragraph!</p>");
+When we put text in quotes like this, we call it a string (as in a "string of characters"). From now on, when we say "string," you can think "text" or "phrase." Strings are always in single or double quotes.
+
+Instructions
+In script.js, create a variable, $h1, and set it equal to a jQuery object containing an <h1> tag with the text "Hello". The tag should be a string.
+-->
+<script type="text/javascript">
+var $h1 = $("<h1>Hello</h1>")
+</script>
+
+
+<!--
+Inserting Elements
+We can insert our newly created elements using a few jQuery actions.
+
+.append() inserts the specified element as the last child of the target element. .prepend() inserts the specified element as the first child of the target element. If we have a div of class .info,
+
+$(".info").append("<p>Stuff!</p>");
+$(".info").prepend("<p>Stuff!</p>");
+will add a paragraph containing the text "Stuff!" inside all divs of class .info. .append() will make the paragraph the last child of each div; .prepend() will make the paragraph the first child of each div. (Note: see the Hint if you're using single quotes.)
+
+.appendTo() does the same as .append(), but it just reverses the order of "what to add" and "where to add it." The code
+
+$('<p>Stuff!</p>').appendTo('.info');
+has the same effect as the .append() code above. .prependTo() has a similar relationship to .prepend().
+-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("body").append("<p>Stuff!</p>");
+});
+</script>
+
+
+<!--
+Before and After
+We can specify where in the DOM we insert an element with the .before() and .after() functions. The syntax looks like this:
+
+$('target').after('<tag>To add</tag>');
+Where 'target' is the element after which you want to add something and the bit between <tag>s is the HTML element you want to add. You can add <h1>s, <div>s, or any other valid HTML you like.
+
+Instructions
+Go ahead and add a <p> tag .after() the <div> with the ID #one. You can place any text you like in your <p> tag.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#one").after("<p>test</p>");
+});
+</script>
+
+
+<!--
+Moving Elements Around
+Moving elements around in the DOM is a snap—all we need to do is use the jQuery functions we just learned on existing elements instead of creating new ones.
+
+var $paragraph = $("p"); // existing element
+$("div").after($paragraph); // Move it!
+// Same as:
+$("div").after($("p"));
+We can select an element using $("p") and assign it to a variable
+We can move the position in the DOM by using the variable in our after() statement
+Note: This does not copy the element from one location to another, it moves the original element effectively saving you from having to delete the original
+
+Instructions
+In script.js, add a new line below your code to move your <p> tag after the <div> with id #one
+create a new jQuery selector that targets the <div> with the id #two
+Using after again, select the <p> tag you created and move it after the <div> with id #two
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#one").after("<p>test</p>");
+    $("#two").after($("p"));
+});
+</script>
+
+<!-- SORTIE :
+Div #1  //le test se met entre div 1 et 2 à la premiere fonction jquery
+Div #2
+test
+-->
+
+
+<!--
+Removing Elements
+Adding elements to our HTML documents is great, but without the ability to remove them, our pages can quickly become cluttered. Thankfully, we have two jQuery functions, .empty() and .remove(), that help us delete content from our pages.
+
+.empty() deletes an element's content and all its descendants. For instance, if you .empty() an 'ol', you'll also remove all its 'li's and their text.
+
+.remove(), not only deletes an element's content, but deletes the element itself.
+
+Instructions
+Go ahead and .remove() your <p> tag from the HTML document.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#one").after("<p>test</p>");
+    $("#two").after($("p"));
+    $("p").remove()
+});
+</script>
+
+
+<!--
+Adding and Removing Classes
+We don't have to limit ourselves to adding or removing entire elements, though—we can fine-tune our jQuery superpowers to alter classes, CSS, and even the contents of our HTML elements.
+
+Let's start with classes. jQuery includes two functions, .addClass() and .removeClass(), that can be used to add or remove a class from an element. This is great if, for example, you have a highlighted class that you want to apply to an element when clicked.
+
+The syntax looks like this:
+
+$('selector').addClass('className');
+$('selector').removeClass('className');
+where 'selector' is the HTML element you want and 'className' is the class name you want to add or remove.
+
+Remember: You aren't selecting anything, you are modifying your element. This means that you do not need # or . before your class.
+
+Instructions
+Now that we think of it, that highlighted class seems like a great idea. We've supplied the HTML and CSS; in the script.js tab, add the jQuery code necessary to make your #text div highlighted when clicked!
+
+MAKE SURE to click "Submit," and THEN click "Highlight me, too!" to see the results.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#text').click(function() {
+        $(this).addClass('highlighted');
+    });
+});
+</script>
+
+
+<!--
+Toggling Classes
+What if we want to toggle a class back and forth, though? That is, what if we want jQuery to automatically check to see whether our #text is .highlighted, so that when we click on it, it adds the class if it isn't there and removes it if it is?
+
+As you probably guessed, jQuery includes a .toggleClass() function that does exactly this. If the element it's called on has the class it receives as an input, .toggleClass() removes that class; if the target element doesn't have that class, .toggleClass() adds it.
+
+Instructions
+Change your .addClass() to a .toggleClass(). Click on your #text a bunch of times. See how it turns the highlighting on and off?
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#text').click(function(){
+        $(this).toggleClass('highlighted');
+    });
+});
+</script>
+
+<!--
+Changing Your Style
+What if we want to fine-tune individual CSS property values, though? Remember style="height:300px; width:300px;"? jQuery makes it a snap!
+
+Because resizing elements is so common, jQuery has specific .height() and .width() functions that can be used to change the heights and widths of HTML elements. For instance:
+
+    $("div").height("100px");
+    $("div").width("50px");
+would give all <div>s on the page a height of 100 pixels and a width of 50 pixels.
+
+jQuery also includes a general-purpose .css() function that takes two inputs: the first is the CSS element to alter, and the second is the value to set it to. For example:
+
+    $("div").css("background-color","#008800");
+would give all <div>s on the page a green background color. You can modify any element's CSS attributes this way.
+
+Instructions
+Let's get some practice in. Change the <div> in our HTML document so it has a height of 200 pixels, a width of 200 pixels, and a border-radius of 10 pixels. Let's make this happen immediately, without the need for a click.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('div').height("200px");
+    $('div').width("200px");
+    $("div").css("border-radius","10px");   
+});
+</script>
+
+
+<!--
+Modifying Content
+Finally, we can update the contents of our HTML elements—that is, the bit between the opening and closing tags—using the .html() and .val() functions.
+
+.html() can be used to set the contents of the first element match it finds. For instance,
+
+$('div').html();
+will get the HTML contents of the first div it finds, and
+
+$('div').html("I love jQuery!");
+will set the contents of the first div it finds to "I love jQuery!"
+
+.val() is used to get the value of form elements. For example,
+
+$('input:checkbox:checked').val();
+would get the value of the first checked checkbox that jQuery finds.
+
+Instructions
+We've added a paragraph to our HTML document. Use the .html() function to set its text to "jQuery magic in action!" (Don't forget the exclamation point!)
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('p').html("jQuery magic in action!");
+});
+</script>
+
+
+<!--
+Set Up
+All right! It's time to apply our newfound knowledge. In this section, we'll build an interactive "to do" list that will add items to a checklist and remove them as they're checked off.
+
+We've provided the necessary HTML and CSS; you'll provide the jQuery.
+
+Instructions
+You know the drill. Get your document .ready()!
+-->
+
+<!--
+Click Da Button! Do It Naoughw!
+You'll notice we've set up an HTML form for grabbing the user's input. We'll need to store the user's input in a variable, which will allow us to append that input to the body of the HTML document later on.
+
+You can set a variable equal to the contents of the input field using .val(), like so:
+
+//Get the value from an input
+var input = $('input[name=checkListItem]').val();
+Our selector finds our specific input using a css selector on our checkListItem input
+We call val() to get the value of the field
+Instructions
+Let's create a .click() event handler for our #button element
+Make sure you pass it a function(){}
+Inside your function(){} create the variable toAdd and set it equal to the contents of the input field.
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#button").click(function(){
+        var toAdd = $('input[name=checkListItem]').val()  //name=checkListItem = un champ dans un form html
+    })
+});
+</script>
+
+
+
+<!--
+Append to Body
+Perfect! Now we want to add our HTML element to the document. We can do this using our handy .append() function.
+
+Let's go ahead and append to our div with the .list class. We'll append a <div> with class="item", since we'll want a way to target our appended <div>s later when we remove them. (A "to do" list is no good if we can't check things off it.)
+
+We'll want the contents of our div to be the contents of our input field, which we saved in the variable toAdd. That means when we append, we'll want to append
+
+'<div class="item">' + toAdd + '</div>'
+Instructions
+Go ahead and .append() a <div> with class="item" to the .list div of your HTML document, then MAKE SURE to click your button to add an item—the exercise will wait for you to do so!
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>To Do</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+        <script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<h2>To Do</h2>
+		<form name="checkListForm">
+			<input type="text" name="checkListItem"/>
+		</form>
+		<div id="button">Add!</div>
+		<br/>
+		<div class="list"></div>
+	</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#button").click(function(){
+        var toAdd = $('input[name=checkListItem]').val();
+        $('.list').append("<div class='item'>" + toAdd + "</div>");
+    })
+});
+</script>
+
+<!--
+Remove What's Been Clicked
+Great job! Finally, we want to be able to check items off our list.
+
+You might think we could do this:
+
+$('.item').click(function() {
+    $(this).remove();
+});
+and that's not a bad idea. The problem is that it won't work—jQuery looks for all the .items when the DOM is loaded, so by the time your document is ready, it's already decided there are no .items to .remove(), and your code won't work.
+
+For this, we'll need a new event handler: .on(). You can think of .on() as a general handler that takes the event, its selector, and an action as inputs. The syntax looks like this:
+
+$(document).on('event', 'selector', function() {
+    Do something!
+});
+In this case, 'event' will be 'click', 'selector' will be '.item', and the thing we'll want to do is call .remove() on this.
+
+Instructions
+Complete your program by adding the .on() event handler as described above. It should go inside your $(document).ready(), but after and outside your $('#button').click().
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#button").click(function(){
+        var toAdd = $('input[name=checkListItem]').val();
+        $('.list').append("<div class='item'>" + toAdd + "</div>");
+    })
+	//enleve le .item ajouté
+    $(document).on('click','.item',function(){
+        $(this).remove();
+    });
+});
+</script>
+
+<!--
+You Did It!
+Great work! You now know how to dynamically update the content of your HTML page, including adding and removing elements.
+
+Now that you can handle manipulating the DOM on the fly, the hard part is over. In the next two lessons, we'll cover a wider range of jQuery event handlers and effects, which will allow you to apply your core programming skills to a variety of challenges.
+
+Instructions
+Click Save & Submit Code to complete this lesson!
+-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#button").click(function(){
+        var toAdd = $('input[name=checkListItem]').val();
+        $('.list').append("<div class='item'>" + toAdd + "</div>");
+    })
+    $(document).on('click','.item',function(){
+        $(this).remove();
+    });
+});
+</script>
