@@ -1,6 +1,7 @@
 # Mooc
 Mes entrainements / My Trainings, Courses :
 
+6: - 11   /2016 : Datacamp   : Importing Data in Python (Part 2) https://www.datacamp.com/courses/importing-data-in-python-part-2  
 5: - 11   /2016 : Datacamp   : Importing Data in Python (Part 1) https://www.datacamp.com/courses/importing-data-in-python-part-1  
 4: - 10   /2016 : Datacamp   : Datacamp Intermediate Python for Data Science https://www.datacamp.com/courses/intermediate-python-for-data-science  
 3: - 10   /2016 : Datacamp   : Intro to Python for Data Science https://www.datacamp.com/courses/intro-to-python-for-data-science  
