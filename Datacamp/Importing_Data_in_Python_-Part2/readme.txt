@@ -1,6 +1,6 @@
-11 / 2016 Datacamp - Importing Data in Python (Part 1)
-https://www.datacamp.com/courses/importing-data-in-python-part-1
+11 / 2016 Datacamp - Importing Data in Python (Part 2)
+https://www.datacamp.com/courses/importing-data-in-python-part-2
 
-partie 1 :  Introduction and flat files
-partie 2 :  Importing data from other file type (Excel spreadsheets, SAS, Stata files, HDF5 files, MATLAB files, etc..)
-partie 3 :  Working with relational databases (sqlite, postgresql)
+partie 1 :  Importing data from the Internet
+partie 2 :  Interacting with APIs to import data from the web 
+partie 3 :  Diving deep into the Twitter API 
