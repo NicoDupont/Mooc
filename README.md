@@ -1,6 +1,8 @@
 #  Mooc  
 
-## **Python**   
+## **Python**    
+01 / 2017 : **Datacamp   : Introduction to Data Visualization with Python**      
+-----------: https://www.datacamp.com/courses/introduction-to-data-visualization-with-python  
 01 / 2017 : **Datacamp   : Manipulating DataFrames with pandas**    
 ----------: https://www.datacamp.com/courses/manipulating-dataframes-with-pandas  
 01 / 2017 : **Datacamp   : Pandas Fundations**    
