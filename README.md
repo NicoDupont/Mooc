@@ -36,5 +36,5 @@
 
 ####Codecademy : 
 
-10 / 2016 : **Codecademy : Python** https://www.codecademy.com/learn/python  
-10 / 2016 : **Codecademy : jquery** https://www.codecademy.com/learn/jquery   
+10 / 2016 : **Python** https://www.codecademy.com/learn/python  
+10 / 2016 : **jQuery** https://www.codecademy.com/learn/jquery   
