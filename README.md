@@ -3,8 +3,7 @@
 
 ####Dataquest :
 
-01-03 / 2017 : **Data Analyst Path**      
------------------: https://www.dataquest.io/home  
+01-03 / 2017 : **Data Analyst Path** https://www.dataquest.io/home  
 
 ####Datacamp : 
 
