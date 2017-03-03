@@ -1,6 +1,8 @@
 #  Mooc  
 
 ## **Python**  
+01-03 / 2017 : **Dataquest   : Data Analyst Path**      
+-----------: https://www.dataquest.io/home  
 01 / 2017 : **Datacamp   : Interactive Data Visualization with Bokeh**      
 -----------: https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh   
 01 / 2017 : **Datacamp   : Introduction to Data Visualization with Python**    
