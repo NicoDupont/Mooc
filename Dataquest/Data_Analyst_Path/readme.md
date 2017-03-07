@@ -1,6 +1,6 @@
 <!-- $theme: gaia -->
 # Dataquest - Data Analyst Path
-01/2017 -> 02/2017  
+01/2017 -> 03/2017  
 https://www.dataquest.io/  
 
 - Step 1: Introduction To Python
