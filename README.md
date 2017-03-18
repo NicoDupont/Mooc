@@ -1,11 +1,11 @@
 #  Mooc  
 
 
-####Dataquest :
+#### Dataquest :
 
 01-03 / 2017 : **Data Analyst Path** https://www.dataquest.io/home  
 
-####Datacamp : 
+#### Datacamp : 
 
 01 / 2017 : **Interactive Data Visualization with Bokeh**      
 -------------: https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh   
@@ -33,7 +33,7 @@
 -------------: https://www.datacamp.com/courses/intro-to-python-for-data-science  
 
 
-####Codecademy : 
+#### Codecademy : 
 
 10 / 2016 : **Python** https://www.codecademy.com/learn/python  
 10 / 2016 : **jQuery** https://www.codecademy.com/learn/jquery   
