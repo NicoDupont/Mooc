@@ -8,7 +8,7 @@
 #### Datacamp : 
 
 05 / 2017 : **Python Data Science Toolbox (Part 2)** (in progress)  
--------------: https://www.datacamp.com/courses/python-data-science-toolbox-part-2
+-------------: https://www.datacamp.com/courses/python-data-science-toolbox-part-2  
 01 / 2017 : **Interactive Data Visualization with Bokeh**      
 -------------: https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh   
 01 / 2017 : **Introduction to Data Visualization with Python**    
