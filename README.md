@@ -7,6 +7,8 @@
 
 #### Datacamp : 
 
+05 / 2017 : **Python Data Science Toolbox (Part 2)** (in progress)  
+-------------: https://www.datacamp.com/courses/python-data-science-toolbox-part-2
 01 / 2017 : **Interactive Data Visualization with Bokeh**      
 -------------: https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh   
 01 / 2017 : **Introduction to Data Visualization with Python**    
@@ -33,7 +35,7 @@
 -------------: https://www.datacamp.com/courses/intro-to-python-for-data-science  
 
 
-#### Codecademy : 
+#### Codecademy :
 
 10 / 2016 : **Python** https://www.codecademy.com/learn/python  
 10 / 2016 : **jQuery** https://www.codecademy.com/learn/jquery   
