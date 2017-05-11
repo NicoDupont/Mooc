@@ -2,7 +2,10 @@
 Datcamp - Python Data Science Toolbox (Part 2)  
 
 ---
- 
+
+Course Description  
+In this second course in the Python Data Science Toolbox, you'll continue to build your Python Data Science skills. First you'll enter the wonderful world of iterators, objects that you have already encountered in the context of for loops without having necessarily known it. You'll then learn about list comprehensions, which are extremely handy tools that form a basic component in the toolbox of all modern Data Scientists working in Python. You'll end the course by working through a case study in which you'll apply all of the techniques you learned both in this course as well as the prequel. If you're looking to make it as a Pythonista Data Science ninja, you have come to the right place.  
+
 # Part 1 : Using iterators in PythonLand  
 
 
@@ -63,7 +66,7 @@ print(next(superspeed))
 print(next(superspeed))
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    jay garrick
@@ -135,7 +138,7 @@ print(next(googol))
 print(next(googol))
 ```
 
-### Results : 
+### Results :
 
 	 script.py> output:
 	    0
@@ -189,7 +192,7 @@ values_sum = sum(values)
 print(values_sum)
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    range(10, 21)
@@ -217,10 +220,10 @@ In this exercise, you are given a list of strings mutants and you will practice 
 
 ```python
 # Create a list of strings: mutants
-mutants = ['charles xavier', 
-            'bobby drake', 
-            'kurt wagner', 
-            'max eisenhardt', 
+mutants = ['charles xavier',
+            'bobby drake',
+            'kurt wagner',
+            'max eisenhardt',
             'kitty pride']
 
 # Create a list of tuples: mutant_list
@@ -238,7 +241,7 @@ for index2, value2 in enumerate(mutants,start=1):
     print(index2, value2)
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    [(0, 'charles xavier'), (1, 'bobby drake'), (2, 'kurt wagner'), (3, 'max eisenhardt'), (4, 'kitty pride')]
@@ -286,7 +289,7 @@ for value1, value2, value3 in mutant_zip:
     print(value1, value2, value3)
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    [('charles xavier', 'prof x', 'telepathy'), ('bobby drake', 'iceman', 'thermokinesis'), ('kurt wagner', 'nightcrawler', 'teleportation'), ('max eisenhardt', 'magneto', 'magnetokinesis'), ('kitty pride', 'shadowcat', 'intangibility')]
@@ -336,7 +339,7 @@ print(result1 == mutants)
 print(result2 == powers)
 ```
 
-### Results : 
+### Results :
 
 	<script.py> output:
 	    ('charles xavier', 'telepathy') ('bobby drake', 'thermokinesis') ('kurt wagner', 'teleportation') ('max eisenhardt', 'magnetokinesis') ('kitty pride', 'intangibility')
@@ -381,7 +384,7 @@ for chunk in pd.read_csv('tweets.csv',chunksize=10):
 print(counts_dict)
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    {'en': 97, 'et': 1, 'und': 2}
@@ -411,7 +414,7 @@ The pandas package has been imported as pd and the file 'tweets.csv' is in your 
 def count_entries(csv_file,c_size,colname):
     """Return a dictionary with counts of
     occurrences as value for each key."""
-    
+
     # Initialize an empty dictionary: counts_dict
     counts_dict = {}
 
@@ -435,9 +438,7 @@ result_counts = count_entries('tweets.csv',10,'lang')
 print(result_counts)
 ```
 
-### Results : 
+### Results :
 
 	 <script.py> output:
 	    {'en': 97, 'et': 1, 'und': 2}
-
-
