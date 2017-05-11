@@ -5,10 +5,10 @@
 
 01-03 / 2017 : **Data Analyst Path** https://www.dataquest.io/home  
 
-#### Datacamp : 
+#### Datacamp :
 
-05 / 2017 : **Cleaning Data in Python** (in progress)    
--------------: https://www.datacamp.com/courses/cleaning-data-in-python  
+05 / 2017 : **Cleaning Data in Python** (in progress)      
+-------------: https://www.datacamp.com/courses/cleaning-data-in-python    
 05 / 2017 : **Python Data Science Toolbox (Part 2)** (in progress)  
 -------------: https://www.datacamp.com/courses/python-data-science-toolbox-part-2  
 01 / 2017 : **Interactive Data Visualization with Bokeh**      
