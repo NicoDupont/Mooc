@@ -9,7 +9,7 @@
 
 XX / 2017 : **Merging DataFrames with pandas** (in progress)        
 -------------: https://www.datacamp.com/courses/merging-dataframes-with-pandas   
-XX / 2017 : **Cleaning Data in Python** (in progress)      
+10 / 2017 : **Cleaning Data in Python**       
 -------------: https://www.datacamp.com/courses/cleaning-data-in-python    
 05 / 2017 : **Python Data Science Toolbox (Part 2)**   
 -------------: https://www.datacamp.com/courses/python-data-science-toolbox-part-2  
