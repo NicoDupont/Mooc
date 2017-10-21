@@ -12,7 +12,7 @@
  - **[Merging DataFrames with pandas](https://www.datacamp.com/courses/merging-dataframes-with-pandas)** (10 / 2017)   
  - **[Cleaning Data in Python](https://www.datacamp.com/courses/cleaning-data-in-python)** (10 / 2017)   
  - **[Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)** (05 / 2017)
- - **[Interactive Data Visualization with](Bokeh https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh)** (01 / 2017)  
+ - **[Interactive Data Visualization with Bokeh](https://www.datacamp.com/courses/interactive-data-visualization-with-bokeh)** (01 / 2017)  
  - **[Introduction to Data Visualization with Python](https://www.datacamp.com/courses/introduction-to-data-visualization-with-python)** (01 / 2017)
  - **[Manipulating DataFrames with pandas](https://www.datacamp.com/courses/manipulating-dataframes-with-pandas)** (01 / 2017)  
  - **[Pandas Fundations](https://www.datacamp.com/courses/pandas-foundations)** (01 / 2017)
