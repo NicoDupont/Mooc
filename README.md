@@ -7,6 +7,8 @@
 
 #### Datacamp :
 
+ - **[Supervised Learning with scikit-learn](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)** (11 / 2017)   
+
 10 / 2017 : **[Data Analyst Track with Python](https://www.datacamp.com/tracks/data-analyst-with-python)** 
 
  - **[Merging DataFrames with pandas](https://www.datacamp.com/courses/merging-dataframes-with-pandas)** (10 / 2017)   
