@@ -3,14 +3,14 @@
 
 #### Dataquest :
 
-01-03 / 2017 : **[Data Analyst Path (Python)](https://www.dataquest.io/home)**   
+01-03 / 2017 : **[Complete Data Analyst Path (Python)](https://www.dataquest.io/home)**   
 
 #### Datacamp :
 
  - **[Machine Learning with the Experts: School Budgets](https://www.datacamp.com/courses/machine-learning-with-the-experts-school-budgets)** (11 / 2017)
  - **[Supervised Learning with scikit-learn](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)** (11 / 2017)   
 
-10 / 2017 : **[Data Analyst Track with Python](https://www.datacamp.com/tracks/data-analyst-with-python)** 
+10 / 2017 : **[Complete Data Analyst Track with Python :](https://www.datacamp.com/tracks/data-analyst-with-python)**
 
  - **[Merging DataFrames with pandas](https://www.datacamp.com/courses/merging-dataframes-with-pandas)** (10 / 2017)   
  - **[Cleaning Data in Python](https://www.datacamp.com/courses/cleaning-data-in-python)** (10 / 2017)   
@@ -27,6 +27,10 @@
  - **[Importing Data in Python (Part 1)](https://www.datacamp.com/courses/importing-data-in-python-part-1)** (11 / 2016)
  - **[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)** (10 / 2016)
  - **[Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)** (10 / 2016)
+
+**[Open Courses of the Datacamp Community :](https://www.datacamp.com/community/open-courses)**
+
+ - **[Kaggle Python Tutorial on Machine Learning](https://www.datacamp.com/community/open-courses/kaggle-python-tutorial-on-machine-learning)** (11/ 2017)
 
 #### Codecademy :
 
