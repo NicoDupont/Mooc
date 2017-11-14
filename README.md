@@ -7,6 +7,7 @@
 
 #### Datacamp :
 
+ - **[Unsupervised Learning in Python](https://www.datacamp.com/courses/unsupervised-learning-in-python)** (11 / 2017)
  - **[Machine Learning with the Experts: School Budgets](https://www.datacamp.com/courses/machine-learning-with-the-experts-school-budgets)** (11 / 2017)
  - **[Supervised Learning with scikit-learn](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)** (11 / 2017)   
 
