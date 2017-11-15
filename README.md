@@ -3,7 +3,8 @@
 
 #### Dataquest :
 
-01-03 / 2017 : **[Complete Data Analyst Path (Python)](https://www.dataquest.io/home)**   
+01-03 / 2017 : **[Complete Data Analyst Path (Python)](https://www.dataquest.io/home)**  
+ - Details : [Link](https://github.com/NicoDupont/Mooc/tree/master/Dataquest/Data_Analyst_Path)
 
 #### Datacamp :
 
