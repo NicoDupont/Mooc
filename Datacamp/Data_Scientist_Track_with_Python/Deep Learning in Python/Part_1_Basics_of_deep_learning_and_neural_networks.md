@@ -16,7 +16,7 @@ In this chapter, you'll become familiar with the fundamental concepts and termin
 
 Which of the models in the diagrams has greater ability to account for interactions?  
 
-![ch1ex2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch1ex2.png)
+![ch1ex2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch1ex2.png)
 
 ### Possible Answers  => 2
 
@@ -38,7 +38,7 @@ Correct! Model 2 has more nodes in the hidden layer, and therefore, greater abil
 
 In this exercise, you'll write code to do forward propagation (prediction) for your first neural network:
 
-![Ch1Ex4](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/1_4.png)
+![Ch1Ex4](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/1_4.png)
 
 Each data point is a customer. The first input is how many accounts they have, and the second input is how many children they have. The model will predict how many transactions the user makes in the next year. You will use this data throughout the first 2 chapters of this course.  
 
@@ -121,7 +121,7 @@ def relu(input):
     '''Define your relu activation function here'''
     # Calculate the value for the output of the relu function: output
     output = max(0, input)
-    
+
     # Return the value just calculated
     return(output)
 
@@ -180,11 +180,11 @@ def predict_with_network(input_data_row, weights):
 
     # Put node values into array: hidden_layer_outputs
     hidden_layer_outputs = np.array([node_0_output, node_1_output])
-    
+
     # Calculate model output
     input_to_final_layer = (hidden_layer_outputs * weights['output']).sum()
     model_output = relu(input_to_final_layer)
-    
+
     # Return model output
     return(model_output)
 
@@ -213,7 +213,7 @@ You now have a model with 2 hidden layers. The values for an input data point ar
 
 Assume the activation function at each node is the identity function. That is, each node's output will be the same as its input. So the value of the bottom node in the first hidden layer is -1, and not 0, as it would be if the ReLU activation function was used.  
 
-![ch1ex9](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch1ex9.png)
+![ch1ex9](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch1ex9.png)
 
 ### Possible Answers  => 1 (0)
 
@@ -238,7 +238,7 @@ The nodes in the second hidden layer are called node_1_0 and node_1_1. Their wei
 
 We then create a model output from the hidden nodes using weights pre-loaded as weights['output'].  
 
-![ch1ex10](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch1ex10.png)
+![ch1ex10](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch1ex10.png)
 
 ### Instructions
 
@@ -260,7 +260,7 @@ def predict_with_network(input_data):
 
     # Put node values into array: hidden_0_outputs
     hidden_0_outputs = np.array([node_0_0_output, node_0_1_output])
-    
+
     # Calculate node 0 in the second hidden layer
     node_1_0_input = (hidden_0_outputs * weights['node_1_0']).sum()
     node_1_0_output = relu(node_1_0_input)
@@ -274,7 +274,7 @@ def predict_with_network(input_data):
 
     # Calculate model output: model_output
     model_output = (hidden_1_outputs * weights['output']).sum()
-    
+
     # Return model_output
     return(model_output)
 ```

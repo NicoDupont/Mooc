@@ -18,7 +18,7 @@ For the exercises in this chapter, you'll continue working with the network to p
 
 What is the error (predicted - actual) for the following network when the input data is [3, 2] and the actual value of the target (what you are trying to predict) is 5? It may be helpful to get out a pen and piece of paper to calculate these values.  
 
-![ch2_ex2_3](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch2_ex2_3.png)
+![ch2_ex2_3](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch2_ex2_3.png)
 
 ### Possible Answers  => 11
 
@@ -41,7 +41,7 @@ Well done! The network generates a prediction of 16, which results in an error o
 
 Imagine you have to make a prediction for a single data point. The actual value of the target is 7. The weight going from node_0 to the output is 2, as shown below. If you increased it slightly, changing it to 2.01, would the predictions become more accurate, less accurate, or stay the same?  
 
-![ch2_ex2_3 (1)](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch2_ex2_3.png)
+![ch2_ex2_3 (1)](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch2_ex2_3.png)
 
 ### Possible Answers => 2
 
@@ -65,7 +65,7 @@ Now you'll get to change weights in a real network and see how they affect model
 
 Have a look at the following neural network: Ch2Ex4  
 
-![ch2ex4.png](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch2ex4.png)
+![ch2ex4.png](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch2ex4.png)
 
 Its weights have been pre-loaded as weights_0. Your task in this exercise is to update a single weight in weights_0 to create weights_1, which gives a perfect prediction (in which the predicted value is equal to target_actual: 3).  
 
@@ -317,7 +317,7 @@ plt.show()
 
 ### Results :  
 
-![graph1](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/graph1.svg)
+![graph1](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/graph1.svg)
 
 ---
 
@@ -369,11 +369,11 @@ In the network shown below, we have done forward propagation, and node values ca
 
 This network again uses the ReLU activation function, so the slope of the activation function is 1 for any node receiving a positive value as input. Assume the node being examined had a positive value (so the activation function's slope is 1).    
 
-![ch2ex14_1](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch2ex14_1.png)
+![ch2ex14_1](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch2ex14_1.png)
 
 What is the slope needed to update the weight with the question mark?  
 
-![ch2ex14_2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/ch2ex14_2.png)
+![ch2ex14_2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/ch2ex14_2.png)
 
 ### Possible answers => 3 (6)
 

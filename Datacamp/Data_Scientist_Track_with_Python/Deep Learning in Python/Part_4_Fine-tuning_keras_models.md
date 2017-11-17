@@ -338,7 +338,7 @@ plt.show()
 
 ### Results :  
 
-![graph2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/graph2.svg)
+![graph2](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/graph2.svg)
 
 The blue model is the one you made, the red is the original model. Your model had a lower loss value, so it is the better model. Nice job!  
 
@@ -410,7 +410,7 @@ plt.show()
 
 ### Results :  
 
-![graph3](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%Learning%in%Python/img/graph3.svg)
+![graph3](https://github.com/NicoDupont/Mooc/blob/master/Datacamp/Data_Scientist_Track_with_Python/Deep%20Learning%20in%20Python/img/graph3.svg)
 
 Great work! The blue model is the one you made and the red is the original model. The model with the lower loss value is the better model.  
 
