@@ -8,10 +8,13 @@
 
 #### Datacamp :
 
- - **[Deep Learning in Python](https://www.datacamp.com/courses/deep-learning-in-python)** (11 / 2017)
- - **[Unsupervised Learning in Python](https://www.datacamp.com/courses/unsupervised-learning-in-python)** (11 / 2017)
- - **[Machine Learning with the Experts: School Budgets](https://www.datacamp.com/courses/machine-learning-with-the-experts-school-budgets)** (11 / 2017)
- - **[Supervised Learning with scikit-learn](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)** (11 / 2017)   
+11 / 2017 : **[Complete Data Scientist Track with Python :](https://www.datacamp.com/tracks/data-scientist-with-python)**
+
+ - **[Network Analysis in Python (Part 1)](https://www.datacamp.com/courses/network-analysis-in-python-part-1)** 
+ - **[Deep Learning in Python](https://www.datacamp.com/courses/deep-learning-in-python)**
+ - **[Unsupervised Learning in Python](https://www.datacamp.com/courses/unsupervised-learning-in-python)**
+ - **[Machine Learning with the Experts: School Budgets](https://www.datacamp.com/courses/machine-learning-with-the-experts-school-budgets)**
+ - **[Supervised Learning with scikit-learn](https://www.datacamp.com/courses/supervised-learning-with-scikit-learn)**
 
 10 / 2017 : **[Complete Data Analyst Track with Python :](https://www.datacamp.com/tracks/data-analyst-with-python)**
 
