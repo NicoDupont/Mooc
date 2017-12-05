@@ -8,6 +8,8 @@
 
 #### Datacamp :
 
+ - **[Manipulating Time Series Data in Python](https://www.datacamp.com/courses/manipulating-time-series-data-in-python)** (12 / 2017)  
+
 11 / 2017 : **[Complete Data Scientist Track with Python :](https://www.datacamp.com/tracks/data-scientist-with-python)**
 
  - **[Network Analysis in Python (Part 1)](https://www.datacamp.com/courses/network-analysis-in-python-part-1)** 
