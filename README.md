@@ -39,6 +39,11 @@
 **[Open Courses of the Datacamp Community :](https://www.datacamp.com/community/open-courses)**
 
  - **[Kaggle Python Tutorial on Machine Learning](https://www.datacamp.com/community/open-courses/kaggle-python-tutorial-on-machine-learning)** (11/ 2017)
+ 
+**[Projects :](https://www.datacamp.com/projects)**
+ - **[Exploring the evolution of Linux](https://www.datacamp.com/projects/111)** (01/2019)
+ - **[Exploring 67 years of LEGO](https://www.datacamp.com/projects/10)** (01/2019)
+ - **[Exploring the Bitcoin cryptocurrency market](https://www.datacamp.com/projects/82)** (01/2019)
 
 #### Codecademy :
 
